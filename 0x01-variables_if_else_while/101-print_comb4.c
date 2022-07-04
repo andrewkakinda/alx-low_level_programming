@@ -13,15 +13,18 @@ int	main(void)
 
 	for (h = '0'; h <= '9'; h++)
 	{
-		for (i = (t + 1); i <= '9'; i++)
+		for (t = (h + 1); t <= '9'; t++)
 		{
-			putchar(h);
-			putchar(t);
-			putchar(i);
-			if (h != '7' || t != '8' || i != '9')
+			for (i = (t + 1); i <= '9'; i++)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(h);
+				putchar(t);
+				putchar(i);
+				if (h != '7' || t != '8' || i != '9')
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
